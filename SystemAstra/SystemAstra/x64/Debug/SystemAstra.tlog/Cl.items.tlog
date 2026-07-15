@@ -1,0 +1,13 @@
+C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\Content\ECS\MovementComponent.cpp;C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\x64\Debug\MovementComponent.obj
+C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\Engine\ECS\CameraComponent.cpp;C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\x64\Debug\CameraComponent.obj
+C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\Engine\ECS\Component.cpp;C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\x64\Debug\Component.obj
+C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\Engine\ECS\Object.cpp;C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\x64\Debug\Object.obj
+C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\Engine\ECS\Render\RenderComponent.cpp;C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\x64\Debug\RenderComponent.obj
+C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\Engine\Factories\Factories.cpp;C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\x64\Debug\Factories.obj
+C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\Engine\Main\GameEngine.cpp;C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\x64\Debug\GameEngine.obj
+C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\Engine\Main\Main.cpp;C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\x64\Debug\Main.obj
+C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\Engine\Reader\Reader.cpp;C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\x64\Debug\Reader.obj
+C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\Engine\Reader\SceneReader.cpp;C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\x64\Debug\SceneReader.obj
+C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\Engine\Scene\Layer.cpp;C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\x64\Debug\Layer.obj
+C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\Engine\Scene\Scene.cpp;C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\x64\Debug\Scene.obj
+C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\glad.c;C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\x64\Debug\glad.obj

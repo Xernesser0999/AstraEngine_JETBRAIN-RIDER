@@ -1,0 +1,20 @@
+{
+    "ID" : 0,
+    "Name" : "Menu",
+    "Layer" : 2,
+    "Objects" : [
+       {
+            "Name" : "Test",
+            "Description" : "",
+            "Team" : "Player",
+            "ID Object" : 0,
+            "LayerPosition" : 0,
+            "Position" : [500,500],
+            "Size" : [50,50],
+            "ECS" : [
+                {"Component" : "Render", "args" : ["Assets/Debug/Baker.png"]},
+		{"Component" : "Move", "args" : []}
+            ]
+        }
+    ]
+}

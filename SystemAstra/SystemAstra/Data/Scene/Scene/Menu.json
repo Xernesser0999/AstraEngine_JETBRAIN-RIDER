@@ -13,7 +13,21 @@
             "Size" : [50,50],
             "ECS" : [
                 {"Component" : "Render", "args" : ["Assets/Debug/Baker.png"]},
-		{"Component" : "Move", "args" : []}
+		        {"Component" : "Move", "args" : []},
+                {"Component" : "Cam", "args" : [false, 0]}
+            ]
+        },
+        {
+            "Name" : "Test",
+            "Description" : "",
+            "Team" : "Player",
+            "ID Object" : 0,
+            "LayerPosition" : 0,
+            "Position" : [500,500],
+            "Size" : [50,50],
+            "ECS" : [
+                {"Component" : "Render", "args" : ["Assets/Debug/Baker.png"]},
+                {"Component" : "Collider", "args" : []}
             ]
         }
     ]

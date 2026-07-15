@@ -32,5 +32,5 @@ private:
     void initGL();
     unsigned int createShader(const char* vs, const char* fs);
     unsigned int loadTexture(const std::string& path);
-    void computeOrthoMatrix(float* out16, float width, float height) const;
+    void computeOrthoMatrix(float* out16, sf::Vector2f camCenter, float width, float height) const;
 };

@@ -170,6 +170,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Content\ECS\ColliderComponent.cpp" />
     <ClCompile Include="Content\ECS\MovementComponent.cpp" />
     <ClCompile Include="Engine\ECS\CameraComponent.cpp" />
     <ClCompile Include="Engine\ECS\Component.cpp" />
@@ -261,6 +262,7 @@
     <ClCompile Include="glad.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Content\ECS\ColliderComponent.h" />
     <ClInclude Include="Content\ECS\MovementComponent.h" />
     <ClInclude Include="Engine\ECS\CameraComponent.h" />
     <ClInclude Include="Engine\ECS\Component.h" />

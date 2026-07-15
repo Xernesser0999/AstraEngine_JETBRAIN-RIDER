@@ -20,6 +20,9 @@ GameEngine::GameEngine() {
         throw std::runtime_error("Échec du chargement de GLAD");
     }
     
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    
     delatTime = 0;
     idScene = 0;
     nextScene = -1;

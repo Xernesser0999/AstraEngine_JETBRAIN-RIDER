@@ -94,9 +94,12 @@ void RenderComponent::initGL() {
     shader = createShader(vs, fs);
 }
 
-void RenderComponent::computeOrthoMatrix(float* out16, float width, float height) const {
-    // ortho(left=0, right=width, bottom=height, top=0, near=-1, far=1)
-    float left = 0.0f, right = width, bottom = height, top = 0.0f, near = -1.0f, far = 1.0f;
+void RenderComponent::computeOrthoMatrix(float* out16, sf::Vector2f camCenter, float width, float height) const {
+    float left   = camCenter.x - width / 2.0f;
+    float right  = camCenter.x + width / 2.0f;
+    float top    = camCenter.y - height / 2.0f;
+    float bottom = camCenter.y + height / 2.0f;
+    float near = -1.0f, far = 1.0f;
 
     for (int i = 0; i < 16; i++) out16[i] = 0.0f;
 
@@ -147,8 +150,9 @@ void RenderComponent::render() {
 
     // Projection : convertit les pixels en NDC selon la taille de la fenêtre
     auto winSize = GameEngine::getWindow()->getSize();
+    sf::Vector2f camCenter = GameEngine::getWindow()->getView().getCenter(); // ← la vraie astuce
     float projMatrix[16];
-    computeOrthoMatrix(projMatrix, (float)winSize.x, (float)winSize.y);
+    computeOrthoMatrix(projMatrix, camCenter, (float)winSize.x, (float)winSize.y);
 
     int projLoc = glGetUniformLocation(shader, "projection");
     glUniformMatrix4fv(projLoc, 1, GL_FALSE, projMatrix);

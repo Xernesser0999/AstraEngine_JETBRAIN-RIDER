@@ -172,8 +172,13 @@
   <ItemGroup>
     <ClCompile Include="Content\ECS\ColliderComponent.cpp" />
     <ClCompile Include="Content\ECS\MovementComponent.cpp" />
+    <ClCompile Include="Content\ECS\Physics\PhysGunComponent.cpp" />
+    <ClCompile Include="Content\ECS\Physics\PhysicsComponent.cpp" />
+    <ClCompile Include="Content\ECS\ShipSystem\CargoGrid.cpp" />
+    <ClCompile Include="Content\ECS\ShipSystem\ShipManager.cpp" />
     <ClCompile Include="Engine\ECS\CameraComponent.cpp" />
     <ClCompile Include="Engine\ECS\Component.cpp" />
+    <ClCompile Include="Engine\ECS\Input\MouseComponent.cpp" />
     <ClCompile Include="Engine\ECS\Object.cpp" />
     <ClCompile Include="Engine\ECS\Render\RenderComponent.cpp" />
     <ClCompile Include="Engine\Factories\Factories.cpp" />
@@ -264,8 +269,13 @@
   <ItemGroup>
     <ClInclude Include="Content\ECS\ColliderComponent.h" />
     <ClInclude Include="Content\ECS\MovementComponent.h" />
+    <ClInclude Include="Content\ECS\Physics\PhysGunComponent.h" />
+    <ClInclude Include="Content\ECS\Physics\PhysicsComponent.h" />
+    <ClInclude Include="Content\ECS\ShipSystem\CargoGrid.h" />
+    <ClInclude Include="Content\ECS\ShipSystem\ShipManager.h" />
     <ClInclude Include="Engine\ECS\CameraComponent.h" />
     <ClInclude Include="Engine\ECS\Component.h" />
+    <ClInclude Include="Engine\ECS\Input\MouseComponent.h" />
     <ClInclude Include="Engine\ECS\Object.h" />
     <ClInclude Include="Engine\ECS\Render\RenderComponent.h" />
     <ClInclude Include="Engine\Factories\Factories.h" />

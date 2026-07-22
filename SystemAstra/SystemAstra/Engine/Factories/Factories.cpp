@@ -8,6 +8,9 @@
 #include "../../Content/ECS/MovementComponent.h"
 #include "../ECS/CameraComponent.h"
 #include "../../Content/ECS/ColliderComponent.h"
+#include "../../Content/ECS/Physics/PhysGunComponent.h"
+#include "../../Content/ECS/Physics/PhysicsComponent.h"
+#include "../ECS/Input/MouseComponent.h"
 
 std::unordered_map <
     std::string,
@@ -24,5 +27,14 @@ std::unordered_map <
     }},
     {"Collider", [](Object* obj, const nlohmann::json& ecs, Scene* currentScene) -> Component* {
         return new ColliderComponent(obj, currentScene->getVecObjects());
+    }},
+    {"Gun", [](Object* obj, const nlohmann::json& ecs, Scene* currentScene) -> Component* {
+        return new PhysGunComponent(obj, currentScene->getVecObjects());
+    }},
+    {"Phys", [](Object* obj, const nlohmann::json& ecs, Scene* currentScene) -> Component* {
+        return new PhysicsComponent(obj);
+    }},
+    {"Mouse", [](Object* obj, const nlohmann::json& ecs, Scene* currentScene) -> Component* {
+        return new MouseComponent(obj);
     }}
 };

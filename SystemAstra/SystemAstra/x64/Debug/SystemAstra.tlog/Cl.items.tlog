@@ -1,7 +1,10 @@
 C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\Content\ECS\ColliderComponent.cpp;C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\x64\Debug\ColliderComponent.obj
 C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\Content\ECS\MovementComponent.cpp;C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\x64\Debug\MovementComponent.obj
+C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\Content\ECS\Physics\PhysGunComponent.cpp;C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\x64\Debug\PhysGunComponent.obj
+C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\Content\ECS\Physics\PhysicsComponent.cpp;C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\x64\Debug\PhysicsComponent.obj
 C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\Engine\ECS\CameraComponent.cpp;C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\x64\Debug\CameraComponent.obj
 C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\Engine\ECS\Component.cpp;C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\x64\Debug\Component.obj
+C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\Engine\ECS\Input\MouseComponent.cpp;C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\x64\Debug\MouseComponent.obj
 C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\Engine\ECS\Object.cpp;C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\x64\Debug\Object.obj
 C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\Engine\ECS\Render\RenderComponent.cpp;C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\x64\Debug\RenderComponent.obj
 C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\Engine\Factories\Factories.cpp;C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\x64\Debug\Factories.obj

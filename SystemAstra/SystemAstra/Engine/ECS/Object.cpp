@@ -1,5 +1,7 @@
 ﻿#include "Object.h"
 
+#include "Render/RenderComponent.h"
+
 Object::Object() : position({0,0}), size({0,0}) , name(""){
 }
 
@@ -54,6 +56,11 @@ sf::Vector2f Object::getPosition()
 void Object::setPosition(sf::Vector2f newPosition)
 {
     position = newPosition;
+    
+    auto comp = getComponent<RenderComponent>();
+    if (comp) {
+        comp->setPosition(position);
+    }
 }
 
 sf::Vector2f Object::getSize()
@@ -64,6 +71,11 @@ sf::Vector2f Object::getSize()
 void Object::setSize(sf::Vector2f newSize)
 {
     size = newSize;
+    
+    auto comp = getComponent<RenderComponent>();
+    if (comp) {
+        comp->setSize(size);
+    }
 }
 
 void Object::setLayer(int _layer) {

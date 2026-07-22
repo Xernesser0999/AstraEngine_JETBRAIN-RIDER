@@ -27,6 +27,7 @@ public:
     void setPosition(const sf::Vector2f& pos);
     void setSize(const sf::Vector2f& newSize);
     void setRotation(float degrees);
+    void setTexture(std::string texturePath);
 
 private:
     void initGL();

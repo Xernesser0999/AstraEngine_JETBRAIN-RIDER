@@ -165,6 +165,10 @@ void RenderComponent::render() {
     glDrawArrays(GL_TRIANGLE_FAN, 0, 4);
 }
 
+void RenderComponent::setTexture(std::string texturePath) {
+    texture = loadTexture(texturePath);
+}
+
 void RenderComponent::setPosition(const sf::Vector2f& pos) { position = pos; }
 void RenderComponent::setSize(const sf::Vector2f& newSize) { size = newSize; }
 void RenderComponent::setRotation(float degrees) { rotation = degrees; }

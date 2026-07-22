@@ -1,6 +1,5 @@
 ﻿#pragma once
 #include "../../Engine/ECS/Object.h"
-
 class GameEngine;
 
 class ColliderComponent : public Component

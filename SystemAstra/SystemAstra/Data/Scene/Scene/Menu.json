@@ -14,6 +14,8 @@
             "ECS" : [
                 {"Component" : "Render", "args" : ["Assets/Debug/Baker.png"]},
 		        {"Component" : "Move", "args" : []},
+                {"Component" : "Mouse", "args" : []},
+                {"Component" : "Gun", "args" : []},
                 {"Component" : "Cam", "args" : [false, 0]}
             ]
         },
@@ -27,7 +29,8 @@
             "Size" : [50,50],
             "ECS" : [
                 {"Component" : "Render", "args" : ["Assets/Debug/Baker.png"]},
-                {"Component" : "Collider", "args" : []}
+                {"Component" : "Collider", "args" : []},
+                {"Component" : "Phys", "args" : []}
             ]
         }
     ]

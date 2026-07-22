@@ -31,9 +31,4 @@ void MovementComponent::update(float deltaTime) {
         owner->setPosition({owner->getPosition().x, owner->getPosition().y + (speed * deltaTime)});
         VelocityY = -1;
     }
-    
-    auto comp = owner->getComponent<RenderComponent>();
-    if (comp) {
-        comp->setPosition(owner->getPosition());
-    }
 }

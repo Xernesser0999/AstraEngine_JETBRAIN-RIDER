@@ -1,6 +1,6 @@
 ﻿#include "Object.h"
 
-#include "Render/RenderComponent.h"
+#include "Render/OpenGL/RenderComponent_OpenGL.h"
 
 Object::Object() : position({0,0}), size({0,0}) , name(""){
 }
@@ -57,7 +57,7 @@ void Object::setPosition(sf::Vector2f newPosition)
 {
     position = newPosition;
     
-    auto comp = getComponent<RenderComponent>();
+    auto comp = getComponent<RenderComponent_OpenGL>();
     if (comp) {
         comp->setPosition(position);
     }
@@ -72,7 +72,7 @@ void Object::setSize(sf::Vector2f newSize)
 {
     size = newSize;
     
-    auto comp = getComponent<RenderComponent>();
+    auto comp = getComponent<RenderComponent_OpenGL>();
     if (comp) {
         comp->setSize(size);
     }

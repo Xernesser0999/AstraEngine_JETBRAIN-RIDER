@@ -4,22 +4,27 @@
 #include "../ECS/Component.h"
 #include "../Main/GameEngine.h"
 
-#include "../ECS/Render/RenderComponent.h"
-#include "../../Content/ECS/MovementComponent.h"
-#include "../ECS/CameraComponent.h"
+// ENGINE INCLUDE
+#include "../ECS/Render/OpenGL/RenderComponent_OpenGL.h"
+#include "../ECS/Editor/Camera/CameraComponent.h"
 #include "../../Content/ECS/ColliderComponent.h"
 #include "../ECS/Input/MouseComponent.h"
 #include "../ECS/Editor/Grid.h"
+#include "../ECS/Editor/Camera/EditorCam.h"
+
+// CONTENT INCLUDE
+#include "../../Content/ECS/MovementComponent.h"
+#include "../ECS/Editor/ToolBar.h"
 
 std::unordered_map <
     std::string,
     ComponentFactory
 > FactoriesECS::factories = {
+    // #####################
+    // ###### ENGINE #######
+    // #####################
     {"Render", [](Object* obj, const nlohmann::json& ecs, Scene* currentScene) -> Component* {
-        return new RenderComponent(obj, ecs["args"][0]);
-    }},
-    {"Move", [](Object* obj, const nlohmann::json& ecs, Scene* currentScene) -> Component* {
-        return new MovementComponent(obj);
+        return new RenderComponent_OpenGL(obj, ecs["args"][0]);
     }},
     {"Cam", [](Object* obj, const nlohmann::json& ecs, Scene* currentScene) -> Component* {
         return new CameraComponent(obj, ecs["args"][0], ecs["args"][1]);
@@ -32,5 +37,17 @@ std::unordered_map <
     }},
     {"Grid", [](Object* obj, const nlohmann::json& ecs, Scene* currentScene) -> Component* {
         return new Grid(obj, {ecs["args"][0], ecs["args"][1]}, {ecs["args"][2], ecs["args"][3]});
+    }},
+    {"CamEditor", [](Object* obj, const nlohmann::json& ecs, Scene* currentScene) -> Component* {
+        return new EditorCam(obj);
+    }},
+    {"ToolBar", [](Object* obj, const nlohmann::json& ecs, Scene* currentScene) -> Component* {
+        return new ToolBar(obj);
+    }},
+    // #####################
+    // ###### CONTENT ######
+    // #####################
+    {"Move", [](Object* obj, const nlohmann::json& ecs, Scene* currentScene) -> Component* {
+        return new MovementComponent(obj);
     }}
 };

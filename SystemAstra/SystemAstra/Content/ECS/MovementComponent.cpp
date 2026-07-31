@@ -1,6 +1,6 @@
 ﻿#include "MovementComponent.h"
 
-#include "../../Engine/ECS/Render/RenderComponent.h"
+#include "../../Engine/ECS/Render/OpenGL/RenderComponent_OpenGL.h"
 #include "../../Engine/ECS/Object.h"
 
 MovementComponent::MovementComponent(Object* _Owner) : Component(_Owner) {

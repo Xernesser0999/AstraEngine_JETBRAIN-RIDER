@@ -5,6 +5,7 @@
 
 #include "../Scene/Scene.h"
 #include "../Reader/SceneReader.h"
+#include "../ECS/Render/OpenGL/RenderSystem.h"
 
 class GameEngine {
 private:

@@ -1,8 +1,8 @@
 ﻿#include "GameEngine.h"
 #include <optional>
 
-#include "../ECS/Render/RenderSystem.h"
-#include "../ECS/Render/TextureArrayManager.h"
+#include "../ECS/Render/OpenGL/RenderComponent_OpenGL.h"
+#include "../ECS/Render/OpenGL/TextureArrayManager.h"
 
 sf::RenderWindow* GameEngine::window = nullptr;
 std::unordered_map<int, std::string> GameEngine::scenes;
@@ -101,8 +101,15 @@ void GameEngine::update() {
 }
 
 void GameEngine::render() {
-    currentScene->render(); // A GARDER EN CAS DE RENDU SFML
-    RenderSystem::get().renderAll();
+    RenderSystem::get().renderAll();    // OPENGL
+    
+    glBindVertexArray(0);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+    glUseProgram(0);
+
+    window->resetGLStates();
+    currentScene->render(); // SFML
 }
 
 

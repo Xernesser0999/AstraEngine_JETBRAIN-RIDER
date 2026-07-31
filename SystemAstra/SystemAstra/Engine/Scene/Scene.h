@@ -2,7 +2,7 @@
 #include <vector>
 #include "../ECS/Object.h"
 #include "Layer.h"
-#include "../ECS/CameraComponent.h"
+#include "../ECS/Editor/Camera/CameraComponent.h"
 
 class GameEngine;
 class HealthComponent;

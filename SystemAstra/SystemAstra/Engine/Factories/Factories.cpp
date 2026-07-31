@@ -9,6 +9,7 @@
 #include "../ECS/CameraComponent.h"
 #include "../../Content/ECS/ColliderComponent.h"
 #include "../ECS/Input/MouseComponent.h"
+#include "../ECS/Editor/Grid.h"
 
 std::unordered_map <
     std::string,
@@ -28,5 +29,8 @@ std::unordered_map <
     }},
     {"Mouse", [](Object* obj, const nlohmann::json& ecs, Scene* currentScene) -> Component* {
         return new MouseComponent(obj);
+    }},
+    {"Grid", [](Object* obj, const nlohmann::json& ecs, Scene* currentScene) -> Component* {
+        return new Grid(obj, {ecs["args"][0], ecs["args"][1]}, {ecs["args"][2], ecs["args"][3]});
     }}
 };

@@ -174,9 +174,12 @@
     <ClCompile Include="Content\ECS\MovementComponent.cpp" />
     <ClCompile Include="Engine\ECS\CameraComponent.cpp" />
     <ClCompile Include="Engine\ECS\Component.cpp" />
+    <ClCompile Include="Engine\ECS\Editor\Grid.cpp" />
     <ClCompile Include="Engine\ECS\Input\MouseComponent.cpp" />
     <ClCompile Include="Engine\ECS\Object.cpp" />
     <ClCompile Include="Engine\ECS\Render\RenderComponent.cpp" />
+    <ClCompile Include="Engine\ECS\Render\RenderSystem.cpp" />
+    <ClCompile Include="Engine\ECS\Render\TextureArrayManager.cpp" />
     <ClCompile Include="Engine\Factories\Factories.cpp" />
     <ClCompile Include="Engine\Main\GameEngine.cpp" />
     <ClCompile Include="Engine\Main\Main.cpp">
@@ -267,9 +270,12 @@
     <ClInclude Include="Content\ECS\MovementComponent.h" />
     <ClInclude Include="Engine\ECS\CameraComponent.h" />
     <ClInclude Include="Engine\ECS\Component.h" />
+    <ClInclude Include="Engine\ECS\Editor\Grid.h" />
     <ClInclude Include="Engine\ECS\Input\MouseComponent.h" />
     <ClInclude Include="Engine\ECS\Object.h" />
     <ClInclude Include="Engine\ECS\Render\RenderComponent.h" />
+    <ClInclude Include="Engine\ECS\Render\RenderSystem.h" />
+    <ClInclude Include="Engine\ECS\Render\TextureArrayManager.h" />
     <ClInclude Include="Engine\Factories\Factories.h" />
     <ClInclude Include="Engine\Main\GameEngine.h" />
     <ClInclude Include="Engine\Reader\Reader.h" />

@@ -17,7 +17,6 @@ CameraComponent::~CameraComponent()
 }
 
 void CameraComponent::update(float dt) {
-    //ShakeTimer += dt;
     if (haslag)
     {
         ObjectivePos = { owner->getPosition().x + owner->getSize().x / 2, owner->getPosition().y + owner->getSize().y / 2 };

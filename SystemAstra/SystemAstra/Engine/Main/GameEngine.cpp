@@ -1,6 +1,9 @@
 ﻿#include "GameEngine.h"
 #include <optional>
 
+#include "../ECS/Render/RenderSystem.h"
+#include "../ECS/Render/TextureArrayManager.h"
+
 sf::RenderWindow* GameEngine::window = nullptr;
 std::unordered_map<int, std::string> GameEngine::scenes;
 Scene* GameEngine::currentScene;
@@ -12,7 +15,7 @@ std::vector<std::string> GameEngine::myCapacity;
 #include <glad/glad.h>
 
 GameEngine::GameEngine() {
-    window = new sf::RenderWindow(sf::VideoMode::getDesktopMode(), "Project-X");
+    window = new sf::RenderWindow(sf::VideoMode::getDesktopMode(), "AstraEngine - ALPHA");
     
     window->setActive(true);
     
@@ -23,10 +26,15 @@ GameEngine::GameEngine() {
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     
+    TextureArrayManager::get().init(256, 256); // taille de layer, nb max de textures
+    RenderSystem::get().init();
+    
     delatTime = 0;
     idScene = 0;
     nextScene = -1;
     inGame = true;
+    
+    
 }
 
 GameEngine::~GameEngine() {
@@ -93,7 +101,8 @@ void GameEngine::update() {
 }
 
 void GameEngine::render() {
-    currentScene->render();
+    currentScene->render(); // A GARDER EN CAS DE RENDU SFML
+    RenderSystem::get().renderAll();
 }
 
 

@@ -10,12 +10,9 @@
             "ID Object" : 0,
             "LayerPosition" : 0,
             "Position" : [500,500],
-            "Size" : [50,50],
+            "Size" : [50,150],
             "ECS" : [
-                {"Component" : "Render", "args" : ["Assets/Debug/Baker.png"]},
-		        {"Component" : "Move", "args" : []},
-                {"Component" : "Mouse", "args" : []},
-                {"Component" : "Cam", "args" : [false, 0]}
+                {"Component" : "Grid", "args" : [50, 50, 100, 100]}
             ]
         }
     ]

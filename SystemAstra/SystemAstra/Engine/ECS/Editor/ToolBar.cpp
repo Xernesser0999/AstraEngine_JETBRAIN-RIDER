@@ -2,6 +2,7 @@
 #include "../../Main/GameEngine.h"
 #include "../Button/ButtonComponent_UI.h"
 #include "../Render/OpenGL/RenderComponent_OpenGL.h"
+#include "../Render/SFML/RenderComponent_SFML.h"
 #include "Camera/EditorCam.h"
 
 ToolBar::ToolBar(Object* _owner) : Component(_owner) {
@@ -12,7 +13,7 @@ ToolBar::ToolBar(Object* _owner) : Component(_owner) {
     
     Quit = new Object({1920 - 27.5f, 2.5f}, {25, 25});
     Quit->addComponent(new ButtonComponent_UI(Quit));
-    Quit->addComponent(new RenderComponent_OpenGL(Quit, "Assets/Debug/Collider_DebugTX.png"));
+    Quit->addComponent(new RenderComponent_SFML(Quit, "Assets/Debug/Collider_DebugTX.png"));
 }
 
 ToolBar::~ToolBar() {

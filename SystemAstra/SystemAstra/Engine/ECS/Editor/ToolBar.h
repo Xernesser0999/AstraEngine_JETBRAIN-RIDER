@@ -8,6 +8,7 @@ public:
     sf::RectangleShape rect;
 
 public:
+    Object* Bar;
     Object* Quit;
     
 public:

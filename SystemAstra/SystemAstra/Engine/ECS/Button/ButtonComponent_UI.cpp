@@ -7,7 +7,6 @@ ButtonComponent_UI::ButtonComponent_UI(Object* _owner) : Component(_owner) {
     
     rect.setPosition(pos);
     rect.setSize(size);
-    rect.setFillColor(sf::Color::White);
 }
 
 void ButtonComponent_UI::update(float deltaTime) {
@@ -36,6 +35,3 @@ bool ButtonComponent_UI::hovered() {
     return false;
 }
 
-void ButtonComponent_UI::render() {
-    GameEngine::getWindow()->draw(rect);
-}

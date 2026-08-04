@@ -15,7 +15,7 @@ std::vector<std::string> GameEngine::myCapacity;
 #include <glad/glad.h>
 
 GameEngine::GameEngine() {
-    window = new sf::RenderWindow(sf::VideoMode::getDesktopMode(), "AstraEngine - ALPHA");
+    window = new sf::RenderWindow(sf::VideoMode::getDesktopMode(), "AstraEngine - ALPHA", sf::Style::Default, sf::State::Fullscreen);
     
     window->setActive(true);
     

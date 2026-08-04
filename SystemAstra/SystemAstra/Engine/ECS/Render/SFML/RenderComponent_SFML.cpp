@@ -14,3 +14,12 @@ RenderComponent_SFML::RenderComponent_SFML(Object* _owner, std::string file) : C
 void RenderComponent_SFML::render() {
     GameEngine::getWindow()->draw(rect);
 }
+
+void RenderComponent_SFML::setTexture(std::string file) {
+    TX.loadFromFile(file);
+    rect.setTexture(&TX);
+}
+
+void RenderComponent_SFML::setcolor(sf::Color color) {
+    rect.setFillColor(color);
+}

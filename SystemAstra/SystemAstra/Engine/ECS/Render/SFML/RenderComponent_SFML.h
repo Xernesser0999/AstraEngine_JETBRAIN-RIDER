@@ -16,4 +16,7 @@ public:
     ~RenderComponent_SFML() override = default;
     
     void render() override;
+    
+    void setTexture(std::string file);
+    void setcolor(sf::Color color);
 };

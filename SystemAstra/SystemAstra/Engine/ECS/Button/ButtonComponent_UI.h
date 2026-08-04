@@ -15,7 +15,6 @@ public:
     ~ButtonComponent_UI() override = default;
 
     void update(float deltaTime) override;
-    void render() override;
     
     bool clicked();
     bool hovered();

@@ -253,6 +253,7 @@
     </ClCompile>
     <ClCompile Include="Engine\ECS\Editor\Camera\EditorCam.cpp" />
     <ClCompile Include="Engine\ECS\Editor\Grid.cpp" />
+    <ClCompile Include="Engine\ECS\Editor\TileMapExplorer\TileMapExplorer.cpp" />
     <ClCompile Include="Engine\ECS\Editor\ToolBar.cpp" />
     <ClCompile Include="Engine\ECS\Input\MouseComponent.cpp" />
     <ClCompile Include="Engine\ECS\Object.cpp" />
@@ -581,6 +582,7 @@
     <ClInclude Include="Engine\ECS\Editor\Camera\CameraComponent.h" />
     <ClInclude Include="Engine\ECS\Editor\Camera\EditorCam.h" />
     <ClInclude Include="Engine\ECS\Editor\Grid.h" />
+    <ClInclude Include="Engine\ECS\Editor\TileMapExplorer\TileMapExplorer.h" />
     <ClInclude Include="Engine\ECS\Editor\ToolBar.h" />
     <ClInclude Include="Engine\ECS\Input\MouseComponent.h" />
     <ClInclude Include="Engine\ECS\Object.h" />

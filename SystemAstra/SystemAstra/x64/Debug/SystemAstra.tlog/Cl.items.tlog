@@ -5,6 +5,7 @@ C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\Engine\EC
 C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\Engine\ECS\Editor\Camera\CameraComponent.cpp;C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\x64\Debug\CameraComponent.obj
 C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\Engine\ECS\Editor\Camera\EditorCam.cpp;C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\x64\Debug\EditorCam.obj
 C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\Engine\ECS\Editor\Grid.cpp;C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\x64\Debug\Grid.obj
+C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\Engine\ECS\Editor\TileMapExplorer\TileMapExplorer.cpp;C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\x64\Debug\TileMapExplorer.obj
 C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\Engine\ECS\Editor\ToolBar.cpp;C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\x64\Debug\ToolBar.obj
 C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\Engine\ECS\Input\MouseComponent.cpp;C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\x64\Debug\MouseComponent.obj
 C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\Engine\ECS\Object.cpp;C:\Users\Steve\Documents\GitHub\System_Euclide\SystemAstra\SystemAstra\x64\Debug\Object.obj

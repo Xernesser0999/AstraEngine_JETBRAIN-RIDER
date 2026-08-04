@@ -11,6 +11,7 @@ public:
     sf::RectangleShape rect;
     sf::Texture TX;
     
+    std::string path;
 public:
     RenderComponent_SFML(Object* _owner, std::string file);
     ~RenderComponent_SFML() override = default;
@@ -19,4 +20,6 @@ public:
     
     void setTexture(std::string file);
     void setcolor(sf::Color color);
+    
+    std::string getTexturePath();
 };

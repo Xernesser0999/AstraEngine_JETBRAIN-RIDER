@@ -15,6 +15,7 @@
 // CONTENT INCLUDE
 #include "../../Content/ECS/MovementComponent.h"
 #include "../ECS/Editor/ToolBar.h"
+#include "../ECS/Editor/TileMapExplorer/TileMapExplorer.h"
 
 std::unordered_map <
     std::string,
@@ -43,6 +44,9 @@ std::unordered_map <
     }},
     {"ToolBar", [](Object* obj, const nlohmann::json& ecs, Scene* currentScene) -> Component* {
         return new ToolBar(obj);
+    }},
+    {"TileExplorer", [](Object* obj, const nlohmann::json& ecs, Scene* currentScene) -> Component* {
+        return new TileMapExplorer(obj);
     }},
     // #####################
     // ###### CONTENT ######

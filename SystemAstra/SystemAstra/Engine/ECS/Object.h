@@ -31,6 +31,19 @@ public:
 
     void addComponent(Component* newComponent);
 
+    template <typename T> void removeComponent()
+    {
+        for (auto it = components.begin(); it != components.end(); ++it)
+        {
+            if (dynamic_cast<T*>(*it) != nullptr)
+            {
+                delete *it;
+                components.erase(it);
+                return;
+            }
+        }
+    }
+    
     template <typename T> T* getComponent()
     {
         for (auto comp : components)

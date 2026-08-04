@@ -9,6 +9,8 @@ RenderComponent_SFML::RenderComponent_SFML(Object* _owner, std::string file) : C
     
     TX.loadFromFile(file);
     rect.setTexture(&TX);
+    
+    path = file;
 }
 
 void RenderComponent_SFML::render() {
@@ -22,4 +24,8 @@ void RenderComponent_SFML::setTexture(std::string file) {
 
 void RenderComponent_SFML::setcolor(sf::Color color) {
     rect.setFillColor(color);
+}
+
+std::string RenderComponent_SFML::getTexturePath() {
+    return path;
 }

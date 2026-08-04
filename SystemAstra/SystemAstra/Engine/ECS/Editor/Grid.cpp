@@ -2,7 +2,7 @@
 #include "../../Main/GameEngine.h"
 
 Grid::Grid(Object* _owner, sf::Vector2f TileSize, sf::Vector2f TileNumber) : Component(_owner) {
-    float offset = 0;
+    float offset = -2.5;
     
     tilesize = TileSize;
     
@@ -14,7 +14,7 @@ Grid::Grid(Object* _owner, sf::Vector2f TileSize, sf::Vector2f TileNumber) : Com
         offset += TileSize.x;
     }
     
-    offset = 0;
+    offset = -2.5;
     
     for (int z = 0; z < TileNumber.y; z++) {
         sf::RectangleShape* line = new sf::RectangleShape({TileSize.x * TileNumber.x, 5});

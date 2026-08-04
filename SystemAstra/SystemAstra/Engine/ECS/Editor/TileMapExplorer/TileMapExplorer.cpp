@@ -1,5 +1,6 @@
 ﻿#include "TileMapExplorer.h"
 #include <filesystem>
+#include <cmath>
 
 #include "../Grid.h"
 #include "../../Editor/Camera/EditorCam.h"
@@ -18,6 +19,8 @@ TileMapExplorer::TileMapExplorer(Object* _object) : Component(_object) {
     Rect->addComponent(new RenderComponent_SFML(Rect, ""));
     Rect->getComponent<RenderComponent_SFML>()->setcolor(sf::Color(80, 80, 80, 255));
     
+    Actual = new Object({0, 0}, {0, 0});
+    
     load();
 }
 
@@ -29,29 +32,53 @@ TileMapExplorer::~TileMapExplorer() {
     List.clear();
     
     delete Rect;
+    delete Actual;
+    
     Rect = nullptr;
+    Actual = nullptr;
 }
 
 void TileMapExplorer::update(float deltaTime) {
-    Actual = new Object({0, 0}, {0, 0});
-    Actual->addComponent(new RenderComponent_OpenGL(Actual, ""));
-    
     for (auto c : List) {
         if (c->hasComponent<ButtonComponent_UI>()) {
             if (c->getComponent<ButtonComponent_UI>()->clicked()) {
-                Actual->getComponent<RenderComponent_OpenGL>()->setTexture(c->getComponent<RenderComponent_SFML>()->getTexturePath());
+                currentTexturePath = c->getComponent<RenderComponent_SFML>()->getTexturePath();
+                
+                for (auto z : List) {
+                    z->getComponent<RenderComponent_SFML>()->setcolor(sf::Color(255, 255, 255, 255));
+                }
+                c->getComponent<RenderComponent_SFML>()->setcolor(sf::Color(255, 255, 255, 50));
             }
         }
     }
     
-    if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
-        if (Actual) {
-            auto comp = owner->getComponent<Grid>();
-            Actual->setPosition({10,10});
-            Actual->setSize(comp->tilesize);
-            
-            comp->List.push_back(Actual);
+    if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && !currentTexturePath.empty()) {
+        
+        sf::Vector2i pixelPos = sf::Mouse::getPosition(*GameEngine::getWindow());
+        if (pixelPos.x < Rect->getSize().x) {
+            return;
         }
+
+        auto grid = owner->getComponent<Grid>();
+        auto cam  = owner->getComponent<EditorCam>();
+        
+        sf::Vector2f mouseWorldPos = GameEngine::getWindow()->mapPixelToCoords(pixelPos, *cam->view);
+        
+        int cellX = static_cast<int>(std::floor(mouseWorldPos.x / grid->tilesize.x));
+        int cellY = static_cast<int>(std::floor(mouseWorldPos.y / grid->tilesize.y));
+        sf::Vector2f cellPos = { cellX * grid->tilesize.x + grid->tilesize.x / 2, cellY * grid->tilesize.y + grid->tilesize.y / 2};
+        
+        for (auto it = grid->List.begin(); it != grid->List.end(); ++it) {
+            if ((*it)->getPosition() == cellPos) {
+                delete *it;
+                grid->List.erase(it);
+                break;
+            }
+        }
+        
+        Object* newTile = new Object(cellPos, grid->tilesize);
+        newTile->addComponent(new RenderComponent_OpenGL(newTile, currentTexturePath));
+        grid->List.push_back(newTile);
     }
 }
 

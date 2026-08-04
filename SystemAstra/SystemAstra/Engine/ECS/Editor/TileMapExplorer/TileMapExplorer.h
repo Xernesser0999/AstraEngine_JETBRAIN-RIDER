@@ -12,6 +12,8 @@ public:
     
     Object* Rect;
     Object* Actual;
+
+    std::string currentTexturePath; // texture actuellement sélectionnée dans la palette
     
 public:
     TileMapExplorer(Object* _object);

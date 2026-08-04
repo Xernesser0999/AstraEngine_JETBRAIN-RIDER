@@ -36,9 +36,6 @@ std::unordered_map <
     {"Mouse", [](Object* obj, const nlohmann::json& ecs, Scene* currentScene) -> Component* {
         return new MouseComponent(obj);
     }},
-    {"Grid", [](Object* obj, const nlohmann::json& ecs, Scene* currentScene) -> Component* {
-        return new Grid(obj, {ecs["args"][0], ecs["args"][1]}, {ecs["args"][2], ecs["args"][3]});
-    }},
     {"CamEditor", [](Object* obj, const nlohmann::json& ecs, Scene* currentScene) -> Component* {
         return new EditorCam(obj);
     }},
@@ -47,6 +44,9 @@ std::unordered_map <
     }},
     {"TileExplorer", [](Object* obj, const nlohmann::json& ecs, Scene* currentScene) -> Component* {
         return new TileMapExplorer(obj);
+    }},
+    {"Grid", [](Object* obj, const nlohmann::json& ecs, Scene* currentScene) -> Component* {
+        return new Grid(obj, {ecs["args"][0], ecs["args"][1]}, {ecs["args"][2], ecs["args"][3]});
     }},
     // #####################
     // ###### CONTENT ######

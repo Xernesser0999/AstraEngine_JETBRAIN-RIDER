@@ -7,7 +7,7 @@ Grid::Grid(Object* _owner, sf::Vector2f TileSize, sf::Vector2f TileNumber) : Com
     tilesize = TileSize;
     
     for (int z = 0; z < TileNumber.x; z++) {
-        sf::RectangleShape* line = new sf::RectangleShape({5, TileSize.y * TileNumber.y});
+        sf::RectangleShape* line = new sf::RectangleShape({1.5, TileSize.y * TileNumber.y});
         line->setPosition({offset, 0});
         line->setFillColor(sf::Color({255, 255,255,100}));
         lineArray.push_back(line);
@@ -17,7 +17,7 @@ Grid::Grid(Object* _owner, sf::Vector2f TileSize, sf::Vector2f TileNumber) : Com
     offset = -2.5;
     
     for (int z = 0; z < TileNumber.y; z++) {
-        sf::RectangleShape* line = new sf::RectangleShape({TileSize.x * TileNumber.x, 5});
+        sf::RectangleShape* line = new sf::RectangleShape({TileSize.x * TileNumber.x, 1.5});
         line->setPosition({0, offset});
         line->setFillColor(sf::Color({255, 255,255,100}));
         lineArray.push_back(line);
